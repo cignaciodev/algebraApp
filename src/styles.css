@@ -1,0 +1,51 @@
+/** Component Convert number
+background-color: #EFF6EE;
+ background-image: url('../src/image/test.jpg');
+**/
+.container-page {
+  background-color: #EFF6EE;
+}
+
+.container {
+  background: #F02D3A;
+  box-shadow: -7px 8px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 40px;
+  width: 1440px;
+  height: 500px;
+}
+
+
+.custom-select option {
+  width: 240px;
+}
+.tex-centrado {
+  text-align: center;
+  font-family: Gothic A1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: -0.017em;
+  color: #ffffff;
+}
+
+.result {
+  margin-top: 30px;
+}
+
+/**
+Component Sum-number
+**/
+#form{
+  margin-top: 30px;
+}
+#selectInput {
+  margin-top: 30px;
+}
+
+.buttonSum button{
+  margin-top: 20px;
+}
+.resultSum {
+  margin-top: 50px;
+}

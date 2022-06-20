@@ -1,0 +1,47 @@
+<!--Contenedor-->
+<div class="container">
+  <p class="tex-centrado">Convertir numero</p>
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="form-group">
+          <input type="text" placeholder="Introduzca el numero positivo" class="form-control" [(ngModel)]="numero"/>
+        </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" >Numero en base</label>
+          </div>
+          <select name="miselect" [(ngModel)]="baseSeleccion" class="form-select">
+            <option [value]="item" *ngFor="let item of bases">{{item}}</option>
+            </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" >Convertir a base</label>
+          </div>
+          <select name="miselect" [(ngModel)]="baseConvertir" class="form-select">
+            <option [value]="item" *ngFor="let item of basesConvertir">{{item}}</option>
+            </select>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align: center;" class="button">
+     <button type="button" class="btn btn-light" (click)="convertir(numero,baseSeleccion,baseConvertir)">Convertir</button>
+ </div>
+  <div style="text-align: left ;" class="result">
+    <label>Resultado en base {{baseConvertir}}</label>
+    <input class="form-control" type="text" [(ngModel)]="resultado" readonly>
+  </div>
+  
+</div>
+<!--Fin Contenedor-->
+

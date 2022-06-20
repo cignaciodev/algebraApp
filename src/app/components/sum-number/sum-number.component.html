@@ -1,0 +1,71 @@
+<div class="container">
+  <p class="tex-centrado">Suma de numeros</p>
+  <div class="row">
+    <div class="col-6 col-md-6">
+      <div class="form-group" id="form">
+        <input
+          type="text"
+          id="inputSum"
+          placeholder="Introduzca el numero positivo"
+          class="form-control"
+          [(ngModel)]="numeroA"
+        />
+      </div>
+    </div>
+
+    <div class="col-6 col-md-6" id="form">
+      <div class="form-group">
+        <input
+          type="text"
+          id="inputSum"
+          placeholder="Introduzca el numero positivo"
+          class="form-control"
+          [(ngModel)]="numeroB"
+        />
+      </div>
+    </div>
+</div>
+    <div class="row">
+      <div class="col-6 col-md-6" id="selectInput">
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <label class="input-group-text">Sumar desde base</label>
+            <select
+              name="miselect"
+              [(ngModel)]="baseSeleccion"
+              class="form-select"
+            >
+              <option [value]="item" *ngFor="let item of bases">
+                {{ item }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6" id="selectInput">
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text">Convertir a base</label>
+            </div>
+            <select name="miselect" [(ngModel)]="baseConvertir" class="form-select">
+              <option [value]="item" *ngFor="let item of basesConvertir">
+                {{ item }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div style="text-align: center" class="buttonSum">
+    <button type="button" class="btn btn-light" (click)="convertirResultado(numeroA,numeroB,baseSeleccion, baseConvertir)">Convertir</button>
+  </div>
+  <div style="text-align: center" class="resultSum">
+    <label>Resultado en base {{baseConvertir}}</label>
+    <input class="form-control" type="text" [(ngModel)]="resultado" readonly />
+  </div>
+</div>
+
